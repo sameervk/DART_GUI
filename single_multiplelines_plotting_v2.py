@@ -79,7 +79,7 @@ class Plotting:
                 self.ax[index].set_xlim(auto=True, xmin=self.x_lim[0], xmax=self.x_lim[1])
                 self.ax[index].set_ylim(auto=True, ymin=y_lim[0], ymax=y_lim[1])
                 self.ax[index].xaxis.set_label_text('Energy (eV)', fontweight='bold', fontsize=14)
-                self.ax[index].set_ylabel(r'a.u.', fontweight='bold', fontsize=14)
+                self.ax[index].set_ylabel(r'|$\delta \rho$|', fontweight='bold', fontsize=14)
                 self.ax[index].xaxis.set_tick_params(which='minor', width=1, length=5)
                 self.ax[index].xaxis.set_tick_params(which='major', width=1, length=10)
                 
@@ -250,7 +250,11 @@ if __name__=='__main__':
     subpc_c60 = ['/home/sameer/Ellipsometer_data/Data/Sameer/Sameer/RDA/2018-06-27/SubPc/',
                 '/home/sameer/Ellipsometer_data/Data/Sameer/Sameer/RDA/2018-06-27/C60/']
     
-    test_folders = subpc_c60
+    c60 = ['/home/sameer/Ellipsometer_data/Data/Sameer/Sameer/RDA/2017-12-06/C60/']
+
+    AlGaAs = ['/home/sameer/Ellipsometer_data/Data/Sameer/Sameer/RDA/Woollam_simulations/AlGaAs/']
+    
+    test_folders = AlGaAs
 
     diffdata_list, thickness_list, sample_list, max_slider_val = load_data(choice='selected_',directories=test_folders)
 
